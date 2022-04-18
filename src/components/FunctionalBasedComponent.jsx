@@ -14,7 +14,7 @@ function FunctionalBasedComponent(){
         console.log("this is function from parent")
     }*/
 
-    const getvaluefromchild = (value)=>{
+    const sendValueFromChildToParent = (value)=>{
         console.log(value)
     }
 
@@ -23,7 +23,7 @@ function FunctionalBasedComponent(){
             Functional Based Component
             <Child/>
             {/*<PropExample functionfromparent={functionfromparent} flag={true} data="----------"/>*/}
-            <PropExample getvaluefromchild={getvaluefromchild} />
+            <PropExample sendValueFromChildToParent={sendValueFromChildToParent} />
         </div>
     )
 }

@@ -28,7 +28,7 @@ export default class Alaki extends Component {
     }
 
     componentDidMount() {
-        this.getData();
+        // this.getData();
     }
 
     render() {
