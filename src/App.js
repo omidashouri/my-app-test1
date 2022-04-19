@@ -1,6 +1,6 @@
 import './App.css';
 import ClassBasedComponent from "./components/ClassBasedComponent";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
