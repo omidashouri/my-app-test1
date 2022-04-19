@@ -1,22 +1,19 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ClassBasedComponent13 from "./components/ClassBasedComponent13";
+import FunctionalBasedComponent16 from "./components/FunctionalBasedComponent16";
+import {createContext} from "react";
 
+export const ContextBackGroundColor = createContext('blue')
+console.log(ContextBackGroundColor)
 function App() {
-  return (
-    <div className="App">
-        {/*<FunctionalBasedComponent/>*/}
+    return (
+        <ContextBackGroundColor.Provider value='dark'>
+            <div className="App">
 
-        {/*<ClassBasedComponent/>*/}
-
-      {/*<Alaki/>*/}
-
-    {/*    32:00*/}
-
-        <ClassBasedComponent13/>
-
-    </div>
-  );
+                <FunctionalBasedComponent16/>
+            </div>
+         </ContextBackGroundColor.Provider>
+    );
 }
 
 export default App;
