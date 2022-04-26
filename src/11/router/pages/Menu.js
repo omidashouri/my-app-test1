@@ -1,5 +1,5 @@
 import {Link, Route} from "react-router-dom";
-
+import './../../myCss.css'
 
 const MenuItem = ({path,label})=>{
 
@@ -9,7 +9,8 @@ const MenuItem = ({path,label})=>{
          exact
          children={({match})=>{
              return(
-                 <li className={match ? 'bg-danger' : ''}>
+                 // <li className={match ? 'bg-danger' : ''}>
+                 <li className={match ? 'active' : ''}>
                      <Link to={path}>{label}</Link>
                  </li>
              )
@@ -26,7 +27,7 @@ const Menu = ()=>{
             <MenuItem path={'/'} label={'Home'} />
             <MenuItem path={'/about'} label={'About'}/>
             <MenuItem path={'/blogs'} label={'blogs'}/>
-            <MenuItem path='/post' label={'post'}/>
+            <MenuItem path='/post/:post_id' label={'post'}/>
             <MenuItem path={'/contact'} label={'contact'}/>
         </ul>
     )
