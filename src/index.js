@@ -4,12 +4,18 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import AppRouter from "./11/router/AppRouter";
 import App2 from "./App2";
-
+import Greeting from "./YouTube/Greeting";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 ReactDOM.createRoot(
     document.getElementById('root')
-).render(<AppRouter/>);
+).render(<Greeting/>);
+
+
+/*ReactDOM.createRoot(
+    document.getElementById('root')
+).render(<AppRouter/>);*/
 
 
 /*const root = ReactDOM.createRoot(document.getElementById('root'));
