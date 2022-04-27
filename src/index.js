@@ -2,15 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import './index.css';
 import reportWebVitals from './reportWebVitals';
-import AppRouter from "./11/router/AppRouter";
-import App2 from "./App2";
-import Greeting from "./YouTube/Greeting";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MovieApp from "./components/movie-app/MovieApp";
+import GlobalState from "./components/movie-app/GlobalContext";
 
 
-ReactDOM.createRoot(
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(
+    <GlobalState>
+        <MovieApp/>
+    </GlobalState>
+);
+
+
+/*ReactDOM.createRoot(
     document.getElementById('root')
-).render(<Greeting/>);
+).render(<Greeting/>);*/
 
 
 /*ReactDOM.createRoot(

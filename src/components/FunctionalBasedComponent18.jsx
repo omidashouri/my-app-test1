@@ -1,25 +1,5 @@
-import React, {createRef, useContext, useEffect, useReducer} from "react";
-import {Button, Col, Container, Row} from "reactstrap";
-import {ContextBackGroundColor} from "../App";
-import {type} from "@testing-library/user-event/dist/type";
-
-
-const initialState = {
-    flag: false
-}
-
-const myReducer = (state, action) => {
-    switch (action.type) {
-        case 'changeme':
-            console.log(state, action);
-            return {
-                ...state,
-                flag: !state.flag
-    }
-        default:
-            return state;
-    }
-}
+import React, {createRef, useEffect} from "react";
+import {Col, Container, Row} from "reactstrap";
 
 
 function FunctionalBasedComponent18() {
