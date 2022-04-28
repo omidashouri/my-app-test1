@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound";
 import Menu from "./pages/Menu";
 import HomeClass from "./pages/HomeClass";
 
-
+//"react-router-dom": "^5.3.0"
 const AppRouter = () => {
     return (
 

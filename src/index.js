@@ -3,23 +3,30 @@ import ReactDOM from 'react-dom/client';
 // import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MovieApp from "./components/movie-app/MovieApp";
-import GlobalState from "./components/movie-app/GlobalContext";
+import App12 from "./12/App12";
 
 
-const container = document.getElementById("root");
+/*const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 root.render(
     <GlobalState>
         <MovieApp/>
     </GlobalState>
-);
+);*/
 
 
 /*ReactDOM.createRoot(
     document.getElementById('root')
 ).render(<Greeting/>);*/
 
+
+ReactDOM.createRoot(
+    document.getElementById('root')
+).render(<App12/>);
+
+/*ReactDOM.createRoot(
+    document.getElementById('root')
+).render(<AppRouter12/>);*/
 
 /*ReactDOM.createRoot(
     document.getElementById('root')
