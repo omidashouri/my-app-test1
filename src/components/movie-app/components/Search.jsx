@@ -5,11 +5,11 @@ const Search=()=>{
     const {searchParam, handleOnChange, handleSubmit} = useContext(GlobalContext);
 
     return(
-        <div>
+        <div className={'search'}>
             <input name={'search'}
-                   // value={searchParam}
+                   value={searchParam}
                    onChange={handleOnChange} placeholder={'Enter Movie Keyword'}/>
-            <button onClick={handleSubmit}>Submit Search</button>
+            <button disabled={searchParam.trim().length <= 2} onClick={handleSubmit}>Submit Search</button>
         </div>
     )
 }
