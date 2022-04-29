@@ -1,19 +1,34 @@
 import {Link} from "react-router-dom";
 import React from "react";
+import {getCurrentLang, lang} from "../helpers/language";
+import {Button} from "reactstrap";
+
+
+const LANG_MAP = {
+    FA:'EN',
+    EN:'FA'
+}
 
 const Layout = ({children})=>{
+    const changeLanguage = (lng)=>{
+        localStorage.setItem('language', LANG_MAP[lng]);
+        window.location.reload();
+    }
+
 return(
     <>
         <header>
             <ul>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/about'>About</Link></li>
-                <li><Link to='/contact'>Contact</Link></li>
+                <li><Link to='/'>{lang('home')}</Link></li>
+                <li><Link to='/about'>{lang('about')}</Link></li>
+                <li><Link to='/contact'>{lang('contact')}</Link></li>
             </ul>
         </header>
         {children}
         <footer>
             footer
+            {/* OR: ()=>changeLanguage(getCurrentLang())*/}
+            <Button onClick={changeLanguage.bind(this,getCurrentLang())} >{LANG_MAP[getCurrentLang()]}</Button>
         </footer>
     </>
 )
