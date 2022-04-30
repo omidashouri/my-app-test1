@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App12 from "./12/App12";
+import AppCounter from "./crashCourse/AppCounter";
 
 
 /*const container = document.getElementById("root");
@@ -14,15 +15,20 @@ root.render(
     </GlobalState>
 );*/
 
+ReactDOM.createRoot(
+    document.getElementById('root')
+).render(<AppCounter/>);
+
+
 
 /*ReactDOM.createRoot(
     document.getElementById('root')
 ).render(<Greeting/>);*/
 
 
-ReactDOM.createRoot(
+/*ReactDOM.createRoot(
     document.getElementById('root')
-).render(<App12/>);
+).render(<App12/>);*/
 
 /*ReactDOM.createRoot(
     document.getElementById('root')
