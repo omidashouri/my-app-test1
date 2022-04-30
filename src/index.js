@@ -3,8 +3,18 @@ import ReactDOM from 'react-dom/client';
 // import './index.js.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App12 from "./12/App12";
-import AppCounter from "./crashCourse/AppCounter";
+import AppRedux from "./redux/AppRedux";
+import {Provider} from "react-redux";
+import store from "./redux/components/store";
+
+
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(
+    <Provider store={store}>
+        <AppRedux/>
+    </Provider>
+);
 
 
 /*const container = document.getElementById("root");
@@ -15,10 +25,9 @@ root.render(
     </GlobalState>
 );*/
 
-ReactDOM.createRoot(
+/*ReactDOM.createRoot(
     document.getElementById('root')
-).render(<AppCounter/>);
-
+).render(<AppCounter/>);*/
 
 
 /*ReactDOM.createRoot(
